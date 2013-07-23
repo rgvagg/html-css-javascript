@@ -1,0 +1,28 @@
+/* CSS Document */
+#con{ width:1100px; height:340px; background:url(27.jpg); }
+	#l1{ width:auto; height:40px;}
+	#l2{ width:auto; height:60px;}
+		#button1 { width:100px; height:auto;  margin-left:2px; float:left}
+		#button { width:50px; height:auto;  margin-left:2px; float:left}
+	#l3{ width:auto; height:60px;}
+		#button2 { width:125px; height:auto;  margin-left:2px; float:left}
+		#button3 { width:75px; height:auto;  margin-left:2px; float:left}
+
+	#l4{ width:auto; height:60px;}
+				#button4 { width:150px; height:auto;  margin-left:2px; float:left}
+				#button5 { width:150px; height:auto;  margin-left:2px; float:left}
+
+	#l5{ width:auto; height:60px;}
+					#button6 { width:175px; height:auto;  margin-left:2px; float:left}
+
+	#l6{ width:auto; height:60px;}
+						#button7 { width:225px; height:auto;  margin-left:2px; float:left}
+input[type="submit"]
+{
+    border:1px solid red;
+    font-family:helvetica;
+    color:#FFFFFF;
+	background-color:#FFFFFF;
+	width:50px; height:60px;
+    background:url(../images/btn_hover.png) repeat-x;
+}
