@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+	var interval, width=0 , height=0 , opacity=0,r=255;
+	
+	function lightbox()
+	{
+		width += 4;
+		height += 3.5;
+		opacity += 0.009;
+		document.getElementById("body").style.background ="rgb("+r+","+r+","+r+")";
+		document.getElementById("box").style.display ="block";
+		document.getElementById("box").style.width = width + "px";
+		document.getElementById("box").style.height = height + "px";
+		document.getElementById("box").style.opacity = opacity;
+		if(opacity > 1 )
+		{
+			clearInterval(interval);
+		}
+		if(r > 20)
+		{
+			r -= 1;
+		}
+	}
+	interval = setInterval(lightbox,3);
+</script>
+<style type="text/css">
+#box
+{
+	width:0px;
+	height:0px;
+	margin:auto;
+	display:none;
+	border:3px solid #333333;
+	padding:15px;
+	background:#CCCCCC;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Light Box</title>
+</head>
+
+<body id="body">
+	<div id="box">s</div>
+</body>
+</html>
