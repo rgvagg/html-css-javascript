@@ -2,5 +2,5 @@ touch README.md
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/raghav-tchowk/html-css-javascript.git
-git push -u origin master
+git remote add origin1 https://github.com/rgvagg/html-css-javascript.git
+git push -u origin1 master
