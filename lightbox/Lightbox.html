@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+
+<script type="text/javascript">
+	var interval, width=0 , height=0 , opacity=0, r=255;
+
+	function lightbox()
+	{
+		width += 4;
+		height += 3.5;
+		opacity += 0.009;
+		//document.getElementById("abc").style.background ="rgb("+r+","+r+","+r+")";
+		//document.getElementById("abc").style.opacity =0.5;
+		//document.getElementById("demo").style.display="none";
+		document.getElementById("lightbox").style.display ="block";
+		document.getElementById("lightbox").style.width = width + "px";
+		document.getElementById("lightbox").style.height = height + "px";
+		document.getElementById("lightbox").style.opacity = opacity;
+		document.getElementById("lightbox").style.background ="rgba("+r+","+r+","+r+","+0.9+")";
+		//document.getElementById("lightbox").background.style.opacity=0.6;
+		
+
+		if(opacity > 1 )
+		{
+			clearInterval(interval);
+		}
+		if(r > 20)
+		{
+			r -= 1;
+		}
+	}
+	function f1()
+	{
+		interval = setInterval(lightbox,1);
+	}
+	
+	function c()
+	{
+			document.getElementById("demo").style.display="block";
+			document.getElementById("lightbox").style.display="none";
+			//document.getElementById("lightbox").style.background="none";
+	}
+	function h()
+	{
+	document.getElemenById("image").style.border="10px solid cyan";
+	}
+	
+</script>
+
+
+
+<!--
+
+<script type="text/javascript">	
+	//var a,b,c;
+	
+	function f1()
+	{
+	//document.getElementById("lightbox").style.background ="rgb("+r+","+r+","+r+")";
+	document.getElementById("lightbox").style.display ="block";
+	document.getElementById("lightbox").style.display ="block";
+	document.getElementById("lightbox").style.width=600px;
+	document.getElementById("lightbox").style.height=600px;
+	document.getElementById("lightbox").style.background="rgb(150,150,150)";
+	//document.getElementById("abc").style.background="rgb(200,200,200)";
+	//document.getElementById("abc").style.opacity=0.5;
+	}
+	//setInterval(f1,400);
+//a=setInterval(f1,300);
+</script> -->
+
+
+<style type="text/css">
+#lightbox{ display:none; padding:15px; border:10px solid #0066CC; position:absolute; left:250px; bottom:30px}
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Lightbox</title>
+</head>
+
+<body id="abc">
+<!--
+<div style="background:#FF0000; border: 3px solid #0000FF; padding:15px;">
+	hello world<br /><br /><br /><br /><br /><br /><br /><br />
+</div>
+<div style="background:#FF0000; border: 3px solid #0000FF; padding:15px;">
+	hello world<br /><br /><br /><br /><br /><br /><br /><br />
+</div> -->
+<div id="lightbox" style=" margin:auto;">
+	<div id="close" style=" height:50px; width:50px; float:right; " onclick="c()" title="Close">   
+	 <h1 style=" color:#FFFFFF; margin:auto; margin-top:15px;"><a href="#">X</a></h1>
+	</div>
+<center>
+	<table style=" margin:auto; padding:15px; opacity=1; margin-top:100px; background:#FFFFFF">
+    	<tr><td colspan="2"><img src="logo_mail.png" /> </td></tr>
+    	<tr style=" margin:auto"><td colspan="2">Microsoft account <a href="#" title="Go to Help">What's this?</a></td></tr>
+    	<tr><td>UserName:</td><td><input type="text" value="username" onclick="this.value='';" /></td></tr>
+    	<tr><td>Password:</td><td><input type="password" value="password" onclick="this.value='';" /></td></tr>
+    	<tr><td><input type="checkbox" style="float:right" value="Keep me signed in" /></td><td>Keep me signed in</td></tr>
+    	<tr><td colspan="2"><center><input type="submit" value="Sign In" title="SignIn"/></center></td></tr>
+    </table> 
+    
+    </center>
+</div>
+
+<center>
+<div id="demo" style="margin-top:100px">
+<a href="#"><img src="$(KGrHqN,!iUF!rZOEgkGBQYgD+Qq8g~~60_35.JPG" id="image" ondblclick="f1()" onclick="f1()" onmouseup="h()" /></a>
+</div>
+</center>
+<!--<input type="submit" value="lightbox" onclick="f1()"/>
+<!--<input type="submit" value="lightbox" onclick="f1()" />  -->
+</body>
+</html>
